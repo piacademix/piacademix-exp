@@ -1,9 +1,6 @@
-
 PVector target;
 PVector position;
 PVector velocity;
-PVector vecRigth=new PVector(1.0, 0.0);
-PVector vecUp=new PVector(0.0, 1.0);
 
 float distance=0.0;
 float h=300.0;
@@ -12,13 +9,16 @@ float displacement=0.0;
 float dt=0.0;
 float totalTime=0;
 float time_now;
-float padding=10;
+
 float vel;
 float posx=0.0;
 float posy=0.0;
 float total_time=0.0;
 String deltaTime="";
 float vy=0.0;
+float delta_time_step =0.01f;
+
+float padding=10;
 
 
 
@@ -47,7 +47,7 @@ void draw()
     fill(255);
     text(deltaTime,10,35);
     
-    dt+=0.05;
+    dt+= delta_time_step ;
     
   } 
   else
